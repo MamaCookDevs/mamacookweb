@@ -1,8 +1,10 @@
 import React from 'react'
 
+import Hero from '../img/heroBg.png'
+
 const HomeContainer = () => {
   return (
-     <div className='grid grid-cols-1 md:grid-cols-2 gap-2 w-full h-screen'>
+     <section className='grid grid-cols-1 md:grid-cols-2 gap-2 w-full id="home" '>
   <div className='py-2 flex-1 flex flex-col items-start md:items-center
    justify-center gap=4'> 
    <div className='flex items-center gap-4 justify-center px-4 py-2 rounded full'>
@@ -22,8 +24,13 @@ const HomeContainer = () => {
   rounded-lg hover:shadow-lg transition-all ease-in-out'> Order Now</button>
   </div>
   </div>
-  <div className='py-2 bg-blue-400 flex-1'></div>
-</div>
+  <div className='py-2 flex-1'>
+  <img src={Hero} className= " ml-auto h-370 w-full lg:h-650 "alt ="heroBg.png" />
+
+    <div className='w=full h-full absolute flex  items-center justify-center '></div>
+    
+  </div>
+</section>
   )
 }
 
