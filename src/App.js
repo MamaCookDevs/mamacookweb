@@ -11,6 +11,8 @@ const App = () => {
     <div className="w-screen h-auto flex flex-col bg-primary">
       <Header />
 
+      <div>GGGG</div>
+
     <main className='mt-24 p-8 w-full'>
       <Routes>
         <Route path ='/*' element={<MainContainer />} />
