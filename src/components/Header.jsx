@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
-import Logo from './img/MamaLogo.png'
-import Avatar from'./img/avatar.png'
+import Logo from '../img/MamaLogo.png'
+import Avatar from'../img/avatar.png'
 import { MdShoppingBasket, MdAdd, MdLogout } from "react-icons/md";
 import{motion} from "framer-motion";
 import { useStateValue } from "../context/StateProvider";
