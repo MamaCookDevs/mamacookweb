@@ -1,14 +1,29 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Logo from './img/MamaLogo.png'
 import Avatar from'./img/avatar.png'
 import { MdShoppingBasket } from "react-icons/md";
 import{motion} from "framer-motion";
+import { useStateValue } from "../context/StateProvider";
 import {Link} from "react-router-dom";
 import {getAuth, signInWithPopup, GoogleAuthProvider} from 'firebase/auth'
 import {app} from "../firebase.config";
+import { actionType } from '../context/reducer';
 
 const Header = () => {
-    const login = () => {}
+    const firebaseAuth = getAuth(app)
+    const provider = new GoogleAuthProvider()
+
+    const [{ user }, dispatch] = useStateValue()
+
+    const login = async () => {
+      const { 
+        user : {refreshToken, providerData}
+      } = await signInWithPopup(firebaseAuth, provider);
+      dispatch({
+        type : actionType.SET_USER,
+        user: providerData[0],
+      })
+    }
     
   return (
     <header className='fixed z-50 w-screen  p-6 px-16'>
@@ -34,8 +49,8 @@ const Header = () => {
         </div> 
      <div className='relative'>
      <motion.img whileTap={{scale : 0.6}}
-        src={Avatar} 
-        className= 'w-10 min-2-[40px] h-10 min-h-[40px] drop-shadow-x1 cursor cursor-pointer'
+        src={user ? user.photoURL : Avatar} 
+        className= 'w-10 min-2-[40px] h-10 min-h-[40px] drop-shadow-x1 cursor cursor-pointer rounded-full'
         alt="userprofile"
         onClick={login}/>
      </div>
