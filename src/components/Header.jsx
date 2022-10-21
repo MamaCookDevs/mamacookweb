@@ -31,7 +31,7 @@ const Header = () => {
         <div className="absolute -top-3 -right-2 w-4 h-4 rounded-full bg-cartNumBg flex items-center justify-center">
         <p className='text-xs text-white font-semibold'>2</p>
         </div>
-        </div>
+        </div> 
      <div className='relative'>
      <motion.img whileTap={{scale : 0.6}}
         src={Avatar} 
