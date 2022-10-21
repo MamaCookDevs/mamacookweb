@@ -15,7 +15,7 @@ export const actionType = {
           user: action.user,
         };
   
-      case actionType.SET_FOOD_ITEMS:
+      /* case actionType.SET_FOOD_ITEMS:
         return {
           ...state,
           foodItems: action.foodItems,
@@ -31,7 +31,7 @@ export const actionType = {
         return {
           ...state,
           cartItems: action.cartItems,
-        };
+        };*/
   
       default:
         return state;

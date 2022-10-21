@@ -1,6 +1,12 @@
+import { fetchUser } from "../utils/fecthLocalStorageData";
+
+const userInfo= fetchUser()
+
 export const initialState = {
-    user: null,
+    user: userInfo,
     foodItems: null,
-    cartShow: false,
+    cartShow: null,
     cartItems: null,
   };
+
+ 
