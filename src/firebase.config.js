@@ -10,7 +10,7 @@ const firebaseConfig = {
   storageBucket: "mama-cook-c8fe0.appspot.com",
   messagingSenderId: "1040658349114",
   appId: "1:1040658349114:web:fec5d87e3ed9f5b9b18903",
-  measurementId: "G-SP0DKEB384"
+ 
 };
   
   const app = getApps.length > 0 ? getApp() : initializeApp(firebaseConfig);
