@@ -199,7 +199,7 @@ const uploadImage = (e) => {
           </select>
         </div>
         <div className='"group flex justify-center items-center flex-col border-2 boarder-dotted border-gray-300 w-full
-         h-225 md: h-420 cursor-pointer rounded-lg'>
+         h-225 md:h-420 cursor-pointer rounded-lg'>
           {isLoading ? ( <Loader /> ): <>
           {!imageAsset ? (
            <>
@@ -234,7 +234,7 @@ const uploadImage = (e) => {
           )}
              </>}
          </div>
-         <div className='w-full flex flex-col md: flex-row items-center gap-3'>
+         <div className='w-full flex flex-col md:flex-row items-center gap-3'>
           <div className='w-full py-2 border-b border-gray-300 flex items-center gap-2'>
             <MdFoodBank className='text-grey-700 text-2xl' />
             < input type="text" 
@@ -248,7 +248,7 @@ const uploadImage = (e) => {
           </div>
           </div>
 
-          <div className='w-full flex flex-col md: flex-row items-center gap-3'>
+          <div className='w-full flex flex-col md:flex-row items-center gap-3'>
           <div className='w-full py-2 border-b border-gray-300 flex items-center gap-2'>
             <MdDescription className='text-grey-700 text-2xl' />
             < input type="text" 
@@ -263,7 +263,7 @@ const uploadImage = (e) => {
 
          </div>
 
-         <div className='w-full flex flex-col md: flex-row items-center gap-3'>
+         <div className='w-full flex flex-col md:flex-row items-center gap-3'>
           <div className='w-full py-2 border-b border-gray-300 flex items-center gap-2'>
             <MdAttachMoney className='text-grey-700 text-2xl' />
             < input type="text"
