@@ -28,7 +28,7 @@ const HomeContainer = () => {
           </p>
 
           <div className="flex flex-row gap-4 py-5">
-            <button
+            <button 
               type="button"
               className=" bg-red-900 w-full md:w-auto px-4 py-2 
  hover:shadow-lg transition-all ease-in-out text-white rounded-full"
