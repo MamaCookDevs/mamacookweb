@@ -110,11 +110,12 @@ const uploadImage = (e) => {
           setIsLoading(false);
           setFields(true);
           setMsg("Data Uploaded successfully 😊");
+          clearData();
           setAlertStatus("success");
           setTimeout(() => {
             setFields(false);
           }, 4000);
-          clearData();
+          
         }
       } catch (error) {
         console.log(error);
