@@ -1,14 +1,15 @@
-import React, {useState} from "react";
-import Delivery from "../img/delivery.png";
+import React, {useState, useRef, useEffect} from "react";
 import HomeContainer from "./HomeContainer";
 import { motion } from "framer-motion";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import RowContainer from "./RowContainer";
 import { useStateValue } from "../context/StateProvider";
+import MenuContainer from "./MenuContainer";
 
 const MainContainer = () => {
+  const [{ foodItems }, dispatch] = useStateValue();
   const [scrollValue, setScrollValue] = useState(0);
-  const [{ foodItems, cartShow }, dispatch] = useStateValue();
+  useEffect(() => {}, [scrollValue]);
 
   return (
     <div className="w-full h-auto flex flex-col items-center justify-center ">
@@ -25,11 +26,13 @@ const MainContainer = () => {
             Our Cuisines
           </p>
 
+
           <div className="hidden md:flex gap-3 items-center">
             <motion.div
               whileTap={{ scale: 0.75 }}
               className="w-8 h-8 rounded-lg bg-red-700 hover:bg-red-900 hover:shadow-lg cursor-pointer
           flex items-center justify-center transition-all duration-100 ease-in-out"
+          onClick={() => setScrollValue(-200)}
             >
               <MdChevronLeft className="text-lg text-white" />
             </motion.div>
@@ -38,18 +41,24 @@ const MainContainer = () => {
               whileTap={{ scale: 0.75 }}
               className="w-8 h-8 rounded-lg bg-red-700 hover:bg-red-900 hover:shadow-lg cursor-pointer
           flex items-center justify-center transition-all duration-100 ease-in-out"
+          onClick={() => setScrollValue (+200)}
             >
               <MdChevronRight className="text-lg text-white" />
             </motion.div>
           </div>
         </div>
+        
 
         <RowContainer
           scrollValue={scrollValue}
           flag={true}
-          data={foodItems?.filter((n) => n.category === "fruits")}
+          data={foodItems?.filter((n) => n.category === "Main Course")}
         />
       </section>
+
+      <MenuContainer />
+
+   
     </div>
   );
 };

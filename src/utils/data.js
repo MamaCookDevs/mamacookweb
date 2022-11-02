@@ -64,4 +64,9 @@ export const categories = [
     name: "Main Course",
     urlParamName: "maincourse",
   },
+  {
+    id: 9,
+    name: "Starters",
+    urlParamName: "maincourse",
+  },
 ];

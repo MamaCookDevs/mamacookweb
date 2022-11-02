@@ -15,10 +15,11 @@ import {deleteObject,
 import { storage } from '../firebase.config';
 import { getAllFoodItems, saveItem } from '../utils/firebaseFunctions.js';
 import {actionType} from "../context/reducer";
+import { useStateValue } from "../context/StateProvider";
 
 const CreateContainer = () => {
 
-const [title, setTitle] = useState("");
+const [name, setName] = useState("");
 const [description, setDescription] = useState("");
 const [calories, setCalories] = useState("");
 const [price, setPrice] = useState("");
@@ -28,7 +29,7 @@ const [fields, setFields] = useState(false);
 const [alertStatus, setAlertStatus] = useState("danger");
 const [msg, setMsg] = useState(null);
 const [isLoading, setIsLoading] = useState(false)
-const [foodItems, dispatch] = useState();
+const [{foodItems}, dispatch] = useStateValue();
 
 const uploadImage = (e) => {
   setIsLoading(true);
@@ -88,7 +89,7 @@ const uploadImage = (e) => {
     const saveDetails = () => {
       setIsLoading(true);
       try {
-        if (!title || !calories || !imageAsset || !price || !category) {
+        if (!name || !calories || !imageAsset || !price || !category) {
           setFields(true);
           setMsg("Required fields can't be empty");
           setAlertStatus("danger");
@@ -99,7 +100,7 @@ const uploadImage = (e) => {
         } else {
           const data = {
             id: `${Date.now()}`,
-            title: title,
+            name: name,
             imageURL: imageAsset,
             category: category,
             calories: calories,
@@ -132,7 +133,7 @@ const uploadImage = (e) => {
     };
   
     const clearData = () => {
-      setTitle("");
+      setName("");
       setImageAsset(null);
       setCalories("");
       setPrice("");
@@ -172,8 +173,8 @@ const uploadImage = (e) => {
           <input
             type="text"
             required
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             placeholder="Give me a title..."
             className="w-full h-full text-lg bg-transparent outline-none border-none placeholder:text-gray-400 text-textColor"
           />
@@ -234,19 +235,7 @@ const uploadImage = (e) => {
           )}
              </>}
          </div>
-         <div className='w-full flex flex-col md:flex-row items-center gap-3'>
-          <div className='w-full py-2 border-b border-gray-300 flex items-center gap-2'>
-            <MdFoodBank className='text-grey-700 text-2xl' />
-            < input type="text" 
-            required 
-            value={calories}
-            onChange={(e) =>setCalories(e.target.value) }
-            
-            placeholder="Calories" 
-            className=" w-full h-full text-lg bg-transparent outline-none
-            border-none placeholder:text-gray-400 text-textColor" />
-          </div>
-          </div>
+   
 
           <div className='w-full flex flex-col md:flex-row items-center gap-3'>
           <div className='w-full py-2 border-b border-gray-300 flex items-center gap-2'>

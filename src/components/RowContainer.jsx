@@ -1,23 +1,36 @@
-import React from "react";
-import FriedRice from "../img/fried rice.png";
+import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { MdShoppingBasket } from "react-icons/md";
 
-export default function RowContainer({ flag }) {
+
+const RowContainer = ({ flag, data, scrollValue }) => {
+ console.log(data);
+ const rowContainer = useRef()
+ useEffect(() => {
+
+  rowContainer.current.scrollLeft += scrollValue;
+}, [scrollValue]);
+
   return (
     <div
-      className={`w-full my-12 bg-rowBg${
-        flag ? "overflow-x-scroll" : "overflow-x-hidden"
+    ref={rowContainer}
+      className={`w-full flex items-center gap-3 my-12 scroll-smooth ${
+        flag ? "overflow-x-scroll scrollbar-none" : "overflow-x-hidden flex-wrap"
       }`}
     >
-      <div className="w-300 md:w-340 h-auto my-12 p-2 backdrop-blur-lg hover:shadow-lg bg-gray-100 rounded-lg">
+      {
+      data && 
+      data.map(item => (
+      <div key={item?.id}
+       className="w-300 h-[auto] min-w-[300px] md:w-340 md:min-w-[340px] h-auto my-12 p-2 backdrop-blur-lg hover:shadow-lg bg-gray-100 rounded-lg" 
+       flex flex-col items-center justify-center>
         <div className="w-full flex items-center justify-between">
           <motion.div
-            className="w-40 h-40 -mt-8 drop-shadow-2xl cursor-pointer"
+            className="w-40  h-40 -mt-8 drop-shadow-2xl cursor-pointer"
             whileHover={{ scale: 1.2 }}
           >
             <img
-              src={FriedRice}
+              src={item?.imageURL}
               alt=""
               className="w-full h-full object-contain"
             />
@@ -32,16 +45,24 @@ export default function RowContainer({ flag }) {
 
         <div className="w-full flex flex-col items-end justify-end -mt-8">
           <p className="text-textColor font-semibold text-base md:text-lg">
-            Fried Rice
+            {item?.title}
           </p>
-          <p className="mt-1 text-sm text-gray-500">Calories</p>
+          <p className="mt-1 text-sm text-gray-500">
+            {item?.description}
+            </p>
           <div className="flex items-center gap-8">
             <p className="text-lg text-headingColor font-semibold">
-              <span className="text-sm text-orange-500">£</span> Price
+              <span className="text- text-orange-500">£</span> {item?.price}
             </p>
           </div>
         </div>
       </div>
+
+      
+      ))}
     </div>
+
+    
   );
 }
+export default RowContainer;
