@@ -25,7 +25,7 @@ export const categories = [
   {
     id: 1,
     name: "Rice Dishes",
-    urlParamName: "chicken",
+    urlParamName: "ricedishes",
   },
   {
     id: 2,
@@ -35,38 +35,38 @@ export const categories = [
   {
     id: 3,
     name: "Soup",
-    urlParamName: "rice",
+    urlParamName: "Soup",
   },
   {
     id: 4,
     name: "Protein",
-    urlParamName: "fish",
+    urlParamName: "protein",
   },
   {
     id: 5,
     name: "Soft Drinks",
-    urlParamName: "fruits",
+    urlParamName: "softdrink",
   },
   {
     id: 6,
     name: "Beer",
-    urlParamName: "icecreams",
+    urlParamName: "beer",
   },
 
   {
     id: 7,
     name: "Side Dishes",
-    urlParamName: "sidedishes",
+    urlParamName: "Side Dish",
   },
 
   {
     id: 8,
     name: "Main Course",
-    urlParamName: "maincourse",
+    urlParamName: "Main Course",
   },
   {
     id: 9,
     name: "Starters",
-    urlParamName: "maincourse",
+    urlParamName: "Starters",
   },
 ];
