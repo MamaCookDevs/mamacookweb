@@ -22,7 +22,7 @@ const RowContainer = ({ flag, data, scrollValue }) => {
       data && 
       data.map(item => (
       <div key={item?.id}
-       className="w-300 h-[auto] min-w-[300px] md:w-340 md:min-w-[340px] h-auto my-12 p-2 backdrop-blur-lg hover:shadow-lg bg-gray-100 rounded-lg" 
+       className="w-300 min-w-[300px] md:w-340 md:min-w-[340px] h-auto my-12 p-2 backdrop-blur-lg hover:shadow-lg bg-gray-100 rounded-lg" 
        flex flex-col items-center justify-center>
         <div className="w-full flex items-center justify-between">
           <motion.div
