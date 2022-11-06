@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { MdShoppingBasket } from "react-icons/md";
+import NotFound from "../img/NotFound.svg";
 
 
 const RowContainer = ({ flag, data, scrollValue }) => {
@@ -15,12 +16,14 @@ const RowContainer = ({ flag, data, scrollValue }) => {
     <div
     ref={rowContainer}
       className={`w-full flex items-center gap-3 my-12 scroll-smooth ${
-        flag ? "overflow-x-scroll scrollbar-none" : "overflow-x-hidden flex-wrap justify center"
+        flag ? 
+        "overflow-x-scroll scrollbar-none" 
+        : "overflow-x-hidden flex-wrap justify center h-420"
       }`}
     >
       {
-      data && 
-      data.map(item => (
+      data && data.length > 0 ?(
+      data.map((item) => (
       <div key={item?.id}
        className="w-300 h-[auto] min-w-[300px] md:w-340 md:min-w-[340px] h-auto my-12 p-2 backdrop-blur-lg hover:shadow-lg bg-gray-100 rounded-lg" 
        flex flex-col items-center justify-center>
@@ -59,7 +62,14 @@ const RowContainer = ({ flag, data, scrollValue }) => {
       </div>
 
       
-      ))}
+      ))
+      ):(<div className="w-full flex flex-col items-center justify-center">
+      <img src={NotFound} className="h-340" />
+      <p className="text-xl text-headingColor font-semibold my-2">
+        Items Not Available
+      </p>
+      </div>
+      )}
     </div>
 
     
