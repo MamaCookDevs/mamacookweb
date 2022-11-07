@@ -30,23 +30,25 @@ export const categories = [
   {
     id: 2,
     name: "Swallow",
-    urlParamName: "curry",
+    urlParamName: "Swallow",
   },
   {
     id: 3,
     name: "Soup",
     urlParamName: "Soup",
   },
+  
   {
     id: 4,
-    name: "Protein",
-    urlParamName: "protein",
-  },
-  {
-    id: 5,
     name: "Soft Drinks",
     urlParamName: "softdrink",
   },
+  {
+    id: 4,
+    name: "Vodka",
+    urlParamName: "Vodka",
+  },
+
   {
     id: 6,
     name: "Beer",
