@@ -30,7 +30,7 @@ const [alertStatus, setAlertStatus] = useState("danger");
 const [msg, setMsg] = useState(null);
 const [isLoading, setIsLoading] = useState(false)
 
-const [{foodItems, drinkItems}, dispatch] = useStateValue();
+const [{foodItems}, dispatch] = useStateValue();
 
 const uploadImage = (e) => {
   setIsLoading(true);
@@ -146,8 +146,7 @@ const uploadImage = (e) => {
         dispatch({
           type: actionType.SET_FOOD_ITEMS,
           foodItems: data,
-          type: actionType.SET_DRINK_ITEMS,
-          drinkItems: data,
+       
         });
       });
     };
