@@ -11,8 +11,20 @@ export const heroData = [
     price: "15.00",
     imageSrc: I1,
   },
-  { id: 1, name: "Fried Rice", sub: "with Meat", price: "15", imageSrc: I2 },
-  { id: 2, name: "Plantain", sub: "with Meat", price: "15", imageSrc: I3 },
+  { id: 1, 
+    name: "Fried Rice",
+    sub: "with Meat", 
+    price: "15", 
+    imageSrc: I2 
+  },
+
+  { 
+    id: 2, 
+    name: "Plantain", 
+    sub: "with Meat", 
+    price: "15", 
+    imageSrc: I3 
+  },
   {
     id: 2,
     name: "Rice and Chicken Sauce ",
@@ -21,7 +33,7 @@ export const heroData = [
     imageSrc: I4,
   },
 ];
-export const categories = [
+export const foodcategories = [
   {
     id: 1,
     name: "Rice Dishes",
@@ -30,30 +42,15 @@ export const categories = [
   {
     id: 2,
     name: "Swallow",
-    urlParamName: "curry",
+    urlParamName: "Swallow",
   },
   {
     id: 3,
     name: "Soup",
     urlParamName: "Soup",
   },
-  {
-    id: 4,
-    name: "Protein",
-    urlParamName: "protein",
-  },
-  {
-    id: 5,
-    name: "Soft Drinks",
-    urlParamName: "softdrink",
-  },
-  {
-    id: 6,
-    name: "Beer",
-    urlParamName: "beer",
-  },
-
-  {
+  
+    {
     id: 7,
     name: "Side Dishes",
     urlParamName: "Side Dish",
@@ -70,3 +67,23 @@ export const categories = [
     urlParamName: "Starters",
   },
 ];
+export const drinkcategories = [
+{
+  id: 1,
+  name: "Soft Drinks",
+  urlParamName: "softdrink",
+},
+{
+  id: 2,
+  name: "Vodka",
+  urlParamName: "Vodka",
+},
+
+{
+  id: 3,
+  name: "Beer",
+  urlParamName: "beer",
+},
+];
+
+
