@@ -13,7 +13,7 @@ import {deleteObject,
   ref,
   uploadBytesResumable,} from 'firebase/storage'
 import { storage } from '../firebase.config';
-import { getAllFoodItems,getAllDrinkItems, saveItem } from '../utils/firebaseFunctions.js';
+import { getAllFoodItems, saveItem } from '../utils/firebaseFunctions.js';
 import {actionType} from "../context/reducer";
 import { useStateValue } from "../context/StateProvider";
 

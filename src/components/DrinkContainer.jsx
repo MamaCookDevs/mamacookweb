@@ -10,9 +10,7 @@ import { useStateValue } from "../context/StateProvider";
 const DrinkContainer = () => {
     const [filter, setFilter] = useState("Soup")
     useEffect(() => {}, [filter])
-
-    const [{ drinkItems }, dispatch] = useStateValue();
-
+    const [{ footItems }, dispatch] = useStateValue();
   return (
     <section className="w-full flec my-6" id="menu">
     <div className="w-full flex flex-col items-center justify-center">
@@ -61,9 +59,7 @@ const DrinkContainer = () => {
         <div className="w-full">
           <RowContainer
             flag={false}
-
-            data={foodItems?.filter((n) => n.category == filter)}
-
+            data={footItems?.filter((n) => n.category == filter)}
           />
           </div>
         </div>
