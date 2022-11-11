@@ -23,4 +23,11 @@ import {
   
     return items.docs.map((doc) => doc.data());
   };
+
+  export const getAllDrinkItems = async () => {
+    const items = await getDocs(
+      query(collection(firestore, "drinkItems"), orderBy("id", "desc"))
+    );
+    return items.docs.map((doc) => doc.data());
+  }
   

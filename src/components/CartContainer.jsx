@@ -1,5 +1,11 @@
-import React, {useState, useEffect} from 'react'
+import React, { useEffect, useState } from "react";
+import { MdOutlineKeyboardBackspace } from "react-icons/md";
+import { RiRefreshFill } from "react-icons/ri";
+
+import { motion } from "framer-motion";
 import { useStateValue } from "../context/StateProvider";
+import { actionType } from "../context/reducer";
+
 
 const CartContainer = () => {
     const [{ cartShow, cartItems, user}, dispatch] = useStateValue()
@@ -34,3 +40,5 @@ const CartContainer = () => {
     flex flex-col'>CartContainer</div>
   )
 }
+
+export default CartContainer;
