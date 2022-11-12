@@ -6,7 +6,7 @@ import { MdFastfood,
   MdFoodBank,
   MdAttachMoney,
   MdDescription} from 'react-icons/md';
-import { categories } from '../utils/data';
+import { foodcategories, drinkcategories } from '../utils/data';
 import Loader from './Loader';
 import {deleteObject,
   getDownloadURL,
@@ -29,6 +29,7 @@ const [fields, setFields] = useState(false);
 const [alertStatus, setAlertStatus] = useState("danger");
 const [msg, setMsg] = useState(null);
 const [isLoading, setIsLoading] = useState(false)
+
 const [{foodItems}, dispatch] = useStateValue();
 
 const uploadImage = (e) => {
@@ -141,10 +142,11 @@ const uploadImage = (e) => {
     };
   
     const fetchData = async () => {
-      await getAllFoodItems().then((data) => {
+      await getAllFoodItems ().then((data) => {
         dispatch({
           type: actionType.SET_FOOD_ITEMS,
           foodItems: data,
+       
         });
       });
     };
@@ -187,8 +189,18 @@ const uploadImage = (e) => {
             <option value="other" className="bg-white">
               Select Category
             </option>
-            {categories &&
-              categories.map((item) => (
+            {foodcategories &&
+              foodcategories.map((item) => (
+                <option
+                  key={item.id}
+                  className="text-base border-0 outline-none capitalize bg-white text-headingColor"
+                  value={item.urlParamName}
+                >
+                  {item.name}
+                </option>
+              ))},
+              {drinkcategories &&
+              drinkcategories.map((item) => (
                 <option
                   key={item.id}
                   className="text-base border-0 outline-none capitalize bg-white text-headingColor"
@@ -197,6 +209,7 @@ const uploadImage = (e) => {
                   {item.name}
                 </option>
               ))}
+
           </select>
         </div>
         <div className='"group flex justify-center items-center flex-col border-2 boarder-dotted border-gray-300 w-full

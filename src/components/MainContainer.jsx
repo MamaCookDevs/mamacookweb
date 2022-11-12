@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import RowContainer from "./RowContainer";
 import { useStateValue } from "../context/StateProvider";
-import MenuContainer from "./MenuContainer";
-import CartContainer from "./CartContainer";
+import  FoodContainer  from "./FoodContainer";
+import DrinkContainer from "./DrinkContainer";
 import Footer from "./Footer";
+import CartContainer from "./CartContainer";
 
 const MainContainer = () => {
   const [{ foodItems, cartShow }, dispatch] = useStateValue();
@@ -58,12 +59,12 @@ const MainContainer = () => {
         />
       </section>
 
-      <MenuContainer />
+      <FoodContainer />
+      <DrinkContainer />
+      <Footer />
       {cartShow && (
         <CartContainer />
       )}
-
-      <Footer/>
     </div>
   );
 };

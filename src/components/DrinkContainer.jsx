@@ -2,25 +2,25 @@ import React, {useEffect, useState} from 'react'
 import {IoFastFood} from 'react-icons/io5'
 import { motion } from "framer-motion";
 import RowContainer from "./RowContainer";
-import { categories } from '../utils/data'
+import { drinkcategories } from '../utils/data'
 import { useStateValue } from "../context/StateProvider";
 
 
 
-const MenuContainer = () => {
+const DrinkContainer = () => {
     const [filter, setFilter] = useState("Soup")
     useEffect(() => {}, [filter])
-    const [{ foodItems }, dispatch] = useStateValue();
+    const [{ footItems }, dispatch] = useStateValue();
   return (
     <section className="w-full flec my-6" id="menu">
     <div className="w-full flex flex-col items-center justify-center">
         <p className="text-2xl font-semibold capitalize text-headingColor relative before:absolute before:rounded-lg before:content before:w-16 before:h-1 before:-bottom-2 before:left-0 before:bg-gradient-to-tr from-red-700 to-red-900 transition-all ease-in-out duration-100 mr-auto">
-          Our Hot Dishes
+          Drinks
         </p>
 
         <div className="w-full flex items-center justify-start lg:justify-center gap-8 py-6 overflow-x-scroll scrollbar-none">
-          {categories &&
-            categories.map((category) => (
+          {drinkcategories &&
+            drinkcategories.map((category) => (
               <motion.div
                 whileTap={{ scale: 0.75 }}
                 key={category.id}
@@ -59,7 +59,7 @@ const MenuContainer = () => {
         <div className="w-full">
           <RowContainer
             flag={false}
-            data={foodItems?.filter((n) => n.category == filter)}
+            data={footItems?.filter((n) => n.category == filter)}
           />
           </div>
         </div>
@@ -67,4 +67,4 @@ const MenuContainer = () => {
   )
 }
 
-export default MenuContainer
+export default DrinkContainer

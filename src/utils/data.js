@@ -11,8 +11,20 @@ export const heroData = [
     price: "15.00",
     imageSrc: I1,
   },
-  { id: 1, name: "Fried Rice", sub: "with Meat", price: "15", imageSrc: I2 },
-  { id: 2, name: "Plantain", sub: "with Meat", price: "15", imageSrc: I3 },
+  { id: 1, 
+    name: "Fried Rice",
+    sub: "with Meat", 
+    price: "15", 
+    imageSrc: I2 
+  },
+
+  { 
+    id: 2, 
+    name: "Plantain", 
+    sub: "with Meat", 
+    price: "15", 
+    imageSrc: I3 
+  },
   {
     id: 2,
     name: "Rice and Chicken Sauce ",
@@ -21,7 +33,7 @@ export const heroData = [
     imageSrc: I4,
   },
 ];
-export const categories = [
+export const foodcategories = [
   {
     id: 1,
     name: "Rice Dishes",
@@ -72,3 +84,23 @@ export const categories = [
     urlParamName: "Starters",
   },
 ];
+export const drinkcategories = [
+{
+  id: 1,
+  name: "Soft Drinks",
+  urlParamName: "softdrink",
+},
+{
+  id: 2,
+  name: "Vodka",
+  urlParamName: "Vodka",
+},
+
+{
+  id: 3,
+  name: "Beer",
+  urlParamName: "beer",
+},
+];
+
+

@@ -120,7 +120,7 @@ const Header = () => {
         <div className='flex items-center justify-between md:hidden w-full h-full '>
 
         <div className= "relative flex items-center justify-center" onClick={showCart}>
-        <MdShoppingBasket className="text-textColor  text-2x1 ml-8 cursor-pointer" />
+        <MdShoppingBasket className="text-textColor text-2x1 ml-8 cursor-pointer" />
         {cartItems && cartItems.length > 0 && (
           <div className="absolute -top-3 -right-2 w-4 h-4 rounded-full bg-cartNumBg flex items-center justify-center">
           <p className='text-xs text-white font-semibold'>{cartItems.length}</p>
@@ -157,7 +157,7 @@ const Header = () => {
              </Link>
           
             )}
-             <motion.ul    className="flex flex-col 
+             <motion.ul className="flex flex-col 
               " >
             <li className='text-base text-textColor hover:text-headingColor duration-100
               hover:bg-slate-100 transition-all px-4 py-2 ease-in-out cursor-pointer'>Home</li>
