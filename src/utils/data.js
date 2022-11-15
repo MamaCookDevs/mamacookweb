@@ -53,7 +53,7 @@ export const foodcategories = [
   {
     id: 4,
     name: "Soft Drinks",
-    urlParamName: "softdrink",
+    urlParamName: "Soft Drink",
   },
   {
     id: 4,
@@ -88,7 +88,7 @@ export const drinkcategories = [
 {
   id: 1,
   name: "Soft Drinks",
-  urlParamName: "softdrink",
+  urlParamName: "Soft Drink",
 },
 {
   id: 2,

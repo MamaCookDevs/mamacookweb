@@ -8,9 +8,9 @@ import { useStateValue } from "../context/StateProvider";
 
 
 const DrinkContainer = () => {
-    const [filter, setFilter] = useState("Soup")
+    const [filter, setFilter] = useState("Soft Drink")
     useEffect(() => {}, [filter])
-    const [{ footItems }, dispatch] = useStateValue();
+    const [{ foodItems }, dispatch] = useStateValue();
   return (
     <section className="w-full flec my-6" id="menu">
     <div className="w-full flex flex-col items-center justify-center">
@@ -26,7 +26,7 @@ const DrinkContainer = () => {
                 key={category.id}
                 className={`group ${
                   filter === category.urlParamName ? "bg-cartNumBg" : "bg-card"
-                } w-24 flex flex items-center justify-center min-w-[94px] h-28 cursor-pointer rounded-lg drop-shadow-xl flex flex-col gap-3 items-center justify-center hover:bg-cartNumBg `}
+                } w-24 flex items-center justify-center min-w-[94px] h-28 cursor-pointer rounded-lg drop-shadow-xl flex-col gap-3 hover:bg-cartNumBg `}
                 onClick={() => setFilter(category.urlParamName)}
               >
                 <div
@@ -59,7 +59,7 @@ const DrinkContainer = () => {
         <div className="w-full">
           <RowContainer
             flag={false}
-            data={footItems?.filter((n) => n.category == filter)}
+            data={foodItems?.filter((n) => n.category == filter)}
           />
           </div>
         </div>
