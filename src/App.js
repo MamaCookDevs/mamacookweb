@@ -10,7 +10,7 @@ import "@stripe/stripe-js";
 
 const App = () => {
 
-  const [{ foodItems }, dispatch] = useStateValue();
+  const [{ foodItems, drinkItems }, dispatch] = useStateValue();
 
   const fetchData = async () => {
     await getAllFoodItems().then((data) => {
@@ -19,10 +19,10 @@ const App = () => {
         foodItems: data,
       });
     });
-    await getAllFoodItems().then((data) => {
+    await getAllDrinkItems().then((data) => {
       dispatch({
-        type: actionType.SET_FOOD_ITEMS,
-        foodItems: data,
+        type: actionType.SET_DRINK_ITEMS,
+        drinkItems: data,
       });
     });
   };

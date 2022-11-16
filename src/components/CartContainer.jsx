@@ -67,7 +67,14 @@ const CartContainer = () => {
             {/* cart Item */}
             {cartItems &&
               cartItems.length > 0 &&
-              cartItems.map((item) => <CartItems key={item.id} item={item} />)}
+              cartItems.map((item) => (
+                <CartItems
+                  key={item.id}
+                  item={item}
+                  setFlag={setFlag}
+                  flag={flag}
+                />
+              ))}
           </div>
 
           {/* cart total section */}
