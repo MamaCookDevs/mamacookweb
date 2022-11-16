@@ -52,34 +52,17 @@ export const foodcategories = [
   
   {
     id: 4,
-    name: "Soft Drinks",
-    urlParamName: "Soft Drink",
-  },
-  {
-    id: 4,
-    name: "Vodka",
-    urlParamName: "Vodka",
-  },
-
-  {
-    id: 6,
-    name: "Beer",
-    urlParamName: "beer",
-  },
-
-  {
-    id: 7,
     name: "Side Dishes",
     urlParamName: "Side Dish",
   },
 
   {
-    id: 8,
+    id: 5,
     name: "Main Course",
     urlParamName: "Main Course",
   },
   {
-    id: 9,
+    id: 6,
     name: "Starters",
     urlParamName: "Starters",
   },
