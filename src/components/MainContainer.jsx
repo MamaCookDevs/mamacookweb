@@ -6,8 +6,10 @@ import RowContainer from "./RowContainer";
 import { useStateValue } from "../context/StateProvider";
 import  FoodContainer  from "./FoodContainer";
 import DrinkContainer from "./DrinkContainer";
+import StripeContainer from "./StripeContainer";
 import Footer from "./Footer";
 import CartContainer from "./CartContainer";
+import Carousel from "./Carousel";
 
 const MainContainer = () => {
   const [{ foodItems, cartShow }, dispatch] = useStateValue();
@@ -17,6 +19,8 @@ const MainContainer = () => {
   return (
     <div className="w-full h-auto flex flex-col items-center justify-center ">
       <HomeContainer />
+
+      <Carousel/>
 
       <section className="w-full my-6">
         <div className="w-full flex items-center justify-between">
@@ -61,6 +65,7 @@ const MainContainer = () => {
 
       <FoodContainer />
       <DrinkContainer />
+      <StripeContainer/>
       <Footer />
       {cartShow && (
         <CartContainer />

@@ -10,6 +10,9 @@ import { StateProvider } from "./context/StateProvider";
 import { initialState } from "./context/initialState";
 import reducer from "./context/reducer";
 
+import {Elements} from '@stripe/react-stripe-js';
+import {loadStripe} from '@stripe/stripe-js';
+
 ReactDOM.render(
   <Router>
     <StateProvider initialState={initialState} reducer={reducer}>

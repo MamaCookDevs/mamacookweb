@@ -9,3 +9,5 @@
  export{default as CartItems} from './CartItems'
  export{default as Footer} from './Footer'
  export{default as DrinkContainer} from './DrinkContainer'
+ export{default as CheckoutForm} from './CheckoutForm'
+ export{default as StripeContainer} from './StripeContainer'
