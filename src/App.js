@@ -49,7 +49,7 @@ const App = () => {
 
   return (
     <AnimatePresence exitBeforeEnter>
-      <div className="w-screen h-auto flex flex-col bg-primary">
+      <div className="w-screen h-auto flex flex-col bg-background">
         <script src="../path/to/flowbite/dist/flowbite.js"></script>
         <Header />
 
