@@ -65,7 +65,7 @@ const MainContainer = () => {
 
       <FoodContainer />
       <DrinkContainer />
-      <StripeContainer/>
+      
       <Footer />
       {cartShow && (
         <CartContainer />
