@@ -13,7 +13,7 @@ const FoodContainer = () => {
   return (
     <section className="w-full my-6" id="menu">
       <div className="w-full flex flex-col items-center justify-center">
-        <p className="text-2xl font-semibold capitalize text-headingColor relative before:absolute before:rounded-lg before:content before:w-16 before:h-1 before:-bottom-2 before:left-0 before:bg-red-900 transition-all ease-in-out duration-100 mr-auto">
+        <p className="text-2xl font-semibold capitalize text-headingColor relative before:absolute before:rounded-lg before:content before:w-16 before:h-1 before:-bottom-2 before:left-0 before:bg-secondColor transition-all ease-in-out duration-100 mr-auto">
           Our Hot Dishes
         </p>
 
@@ -24,15 +24,15 @@ const FoodContainer = () => {
                 whileTap={{ scale: 0.75 }}
                 key={category.id}
                 className={`group ${
-                  filter === category.urlParamName ? "bg-cartNumBg" : "bg-card"
-                } w-24 min-w-[94px] h-28 cursor-pointer rounded-lg drop-shadow-xl flex flex-col gap-3 items-center justify-center hover:bg-cartNumBg `}
+                  filter === category.urlParamName ? "bg-secondColor" : "bg-background2 "
+                } w-24 min-w-[94px] h-28 cursor-pointer rounded-lg drop-shadow-xl flex flex-col gap-3 items-center justify-center hover:bg-secondColor `}
                 onClick={() => setFilter(category.urlParamName)}
               >
                 <div
                   className={`w-10 h-10 rounded-full shadow-lg ${
                     filter === category.urlParamName
                       ? "bg-white"
-                      : "bg-cartNumBg"
+                      : "bg-secondColor"
                   } group-hover:bg-white flex items-center justify-center`}
                 >
                   <IoFastFood

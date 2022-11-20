@@ -37,7 +37,7 @@ const MainContainer = () => {
           <div className="hidden md:flex gap-3 items-center">
             <motion.div
               whileTap={{ scale: 0.75 }}
-              className="w-8 h-8 rounded-lg bg-red-700 hover:bg-red-900 hover:shadow-lg cursor-pointer
+              className="w-8 h-8 rounded-lg bg-red-700 hover:bg-secondColor hover:shadow-lg cursor-pointer
           flex items-center justify-center transition-all duration-100 ease-in-out"
           onClick={() => setScrollValue(-200)}
             >
@@ -46,7 +46,7 @@ const MainContainer = () => {
 
             <motion.div
               whileTap={{ scale: 0.75 }}
-              className="w-8 h-8 rounded-lg bg-red-700 hover:bg-red-900 hover:shadow-lg cursor-pointer
+              className="w-8 h-8 rounded-lg bg-red-700 hover:bg-secondColor hover:shadow-lg cursor-pointer
           flex items-center justify-center transition-all duration-100 ease-in-out"
           onClick={() => setScrollValue (+200)}
             >

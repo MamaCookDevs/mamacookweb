@@ -42,7 +42,7 @@ addtocart()
       data.map((item) => (
       <div key={item?.id}
 
-       className="w-300 h-[auto] min-w-[300px] md:w-340 md:min-w-[340px] my-12 p-2 backdrop-blur-lg hover:shadow-lg bg-gray-100 rounded-lg" 
+       className="w-300 h-[auto] min-w-[300px] md:w-340 md:min-w-[340px] my-12 p-2 backdrop-blur-lg hover:shadow-lg bg-background rounded-lg" 
 
        flex flex-col items-center justify-center>
         <div className="w-full flex items-center justify-between">
@@ -58,7 +58,7 @@ addtocart()
           </motion.div>
           <motion.div
             whileTap={{ scale: 0.75 }}
-            className="w-8 h-8 rounded-full bg-red-900 flex items-center justify-center cursor-pointer hover:shadow-md -mt-8"
+            className="w-8 h-8 rounded-full bg-secondColor flex items-center justify-center cursor-pointer hover:shadow-md -mt-8"
             onClick={() => setItems ([... cartItems, item])}
           >
             <MdShoppingBasket className="text-white" />

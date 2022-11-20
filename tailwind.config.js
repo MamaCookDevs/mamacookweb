@@ -56,8 +56,10 @@ module.exports = {
         cartItem: "#2e3033",
         cartTotal: "#343739",
         footerText: "#E1B0A9",
-        background: "#FBEED9",
-        headerColor: "#FBEED9",
+        background: "#fff",
+        headerColor: "#fff",
+        secondColor: "#512a07",
+        background2: "#fda329"
       },
     },
   },

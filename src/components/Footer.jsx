@@ -4,7 +4,7 @@ import MamaLogo from "../img/MamaLogo.png";
 
 const Footer = () => {
   return (
-    <section className="w-full h-auto rounded-t-3xl bg-red-900">
+    <section className="w-full h-auto rounded-t-3xl bg-secondColor">
       <div className="py-2 gap-4">
         {/*Desktop Mode*/}
         <div className="md:flex hidden p-10 flex-col">
@@ -42,6 +42,9 @@ const Footer = () => {
             <span className="font-bold">Contact</span>
             <span className="text-footerText font-semibold cursor-pointer hover:underline">
               Email: manager.gh@hslafrica.com
+            </span>
+            <span className="text-footerText font-semibold cursor-pointer hover:underline">
+              Phone: +233-57-881-3209
             </span>
             <span className="text-footerText font-semibold cursor-pointer hover:underline">
               Phone: +233-57-881-3209

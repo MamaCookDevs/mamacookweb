@@ -3,13 +3,14 @@ import "flowbite";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
+
 const slideImages = [
   {
-    url: "https://media.istockphoto.com/id/1185382671/vector/abstract-blurred-colorful-background.jpg?s=612x612&w=0&k=20&c=3YwJa7lCw-cQ-hviINULUokL9lYU4RuGjMP_E_0N8E4=",
-    caption: "Slide 1",
+    url: "https://firebasestorage.googleapis.com/v0/b/mama-cook-c8fe0.appspot.com/o/Images%2FQuatar%20Promo.png?alt=media&token=8cd4192f-e960-49a9-918f-8ade88805383",
+    caption: "",
   },
   {
-    url: "https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGNvbG9yfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+    url: "https://firebasestorage.googleapis.com/v0/b/mama-cook-c8fe0.appspot.com/o/Images%2FMamaCook%20Promo%201.png?alt=media&token=c1c9f203-737e-47c8-8042-f03dd52ca53c",
     caption: "Slide 2",
   },
   {

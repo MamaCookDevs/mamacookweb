@@ -16,7 +16,7 @@ const HomeContainer = () => {
           <p className="text-[3.5rem] items-center lg:text-[4rem] font-bold tracking-wide text-headingColor">
             Enjoy the{" "}
           </p>
-          <p className="text-orange-900 text-[3.5rem] lg:text-[4rem] font-bold">
+          <p className="text-secondColor text-[3.5rem] lg:text-[4rem] font-bold">
             African Taste {""}
           </p>
 
@@ -30,7 +30,7 @@ const HomeContainer = () => {
           <div className="flex flex-row gap-4 py-5">
             <button 
               type="button"
-              className=" bg-red-900 w-full md:w-auto px-4 py-2 
+              className=" bg-secondColor w-full md:w-auto px-4 py-2 
  hover:shadow-lg transition-all ease-in-out text-white rounded-full"
             >
               {" "}
@@ -78,7 +78,7 @@ const HomeContainer = () => {
                 </p>
 
                 <p className="text-sm font-semibold text-headingColor">
-                  <span className="text-xs text-red-600">$</span> {n.price}
+                  <span className="text-xs text-secondColor">$</span> {n.price}
                 </p>
               </div>
           ))
