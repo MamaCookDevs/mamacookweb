@@ -1,9 +1,14 @@
 import React from "react";
 import Location from "../img/mapLocation.png";
 import MamaLogo from "../img/MamaLogo.png";
-import {BsTwitter, BsFacebook, BsInstagram} from 'react-icons/bs'
+import {BsTwitter, BsFacebook, BsInstagram} from 'react-icons/bs';
+import {FaTiktok} from 'react-icons/fa'
 
 const Footer = () => {
+  const openInNewTab = url => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <section className="w-full h-auto rounded-t-3xl bg-secondColor" id="footer">
       <div className="py-2 gap-4">
@@ -50,14 +55,14 @@ const Footer = () => {
           </p>
           </div>
 
-          <div>
-            <img
-            src={BsTwitter}
-            className='w-10 h-10'/>
+          <div className="flex flex-row gap-6 justify-center items-center">
+            <BsFacebook color="#E1B0A9" size={32} onClick={() => openInNewTab('https://facebook.com/mamacookrestaurant')}/>
+            <BsInstagram color="#E1B0A9" size={32} onClick={() => openInNewTab('https://instagram.com/mamacookrestaurant')}/>
+            <FaTiktok color="#E1B0A9" size={32} onClick={() => openInNewTab('https://tiktok.com/mamacookrestaurant')}/>
           </div>
       
           <p className="flex flex-col font-semibold text-footerText
-           w-auto gap-1 text-center">
+           w-auto gap-1 text-center mt-5">
             © 2022 by Mama Cook. All Rights Reserved
           </p>
         </div>
