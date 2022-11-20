@@ -11,11 +11,7 @@ const slideImages = [
   },
   {
     url: "https://firebasestorage.googleapis.com/v0/b/mama-cook-c8fe0.appspot.com/o/Images%2FMamaCook%20Promo%201.png?alt=media&token=c1c9f203-737e-47c8-8042-f03dd52ca53c",
-    caption: "Slide 2",
-  },
-  {
-    url: "https://wallpaperaccess.com/full/1155011.jpg",
-    caption: "Slide 3",
+    caption: "",
   },
 ];
 

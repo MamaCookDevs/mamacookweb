@@ -1,10 +1,11 @@
 import React from "react";
 import Location from "../img/mapLocation.png";
 import MamaLogo from "../img/MamaLogo.png";
+import {BsTwitter, BsFacebook, BsInstagram} from 'react-icons/bs'
 
 const Footer = () => {
   return (
-    <section className="w-full h-auto rounded-t-3xl bg-secondColor">
+    <section className="w-full h-auto rounded-t-3xl bg-secondColor" id="footer">
       <div className="py-2 gap-4">
         {/*Desktop Mode*/}
         <div className="md:flex hidden p-10 flex-col">
@@ -46,10 +47,13 @@ const Footer = () => {
             <span className="text-footerText font-semibold cursor-pointer hover:underline">
               Phone: +233-57-881-3209
             </span>
-            <span className="text-footerText font-semibold cursor-pointer hover:underline">
-              Phone: +233-57-881-3209
-            </span>
           </p>
+          </div>
+
+          <div>
+            <img
+            src={BsTwitter}
+            className='w-10 h-10'/>
           </div>
       
           <p className="flex flex-col font-semibold text-footerText
