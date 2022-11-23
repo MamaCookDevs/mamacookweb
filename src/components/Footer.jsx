@@ -40,7 +40,8 @@ const Footer = () => {
           <p className="flex flex-col text-white justify-center w-5/6 gap-1">
             <span className="font-bold">Address</span>
             <span className="text-footerText font-semibold cursor-pointer hover:underline">
-              London, United Kingdom
+            1, Rochester Parade, High St, Feltham, 
+                      United Kingdom.
             </span>
           </p>
 
