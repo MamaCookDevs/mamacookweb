@@ -59,7 +59,7 @@ const CartItems = ({ item, setFlag, flag }) => {
       />
 
       {/* name section */}
-      <div className="flec flex-col gap-2">
+      <div className="flex flex-col gap-2">
         <p className="text-base text-gray-50">{item?.title}</p>
         <p className="text-sm block text-gray-300 font-semibold">
           $ {parseFloat(item?.price) * qty}

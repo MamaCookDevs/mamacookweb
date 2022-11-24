@@ -63,28 +63,27 @@ const Header = () => {
             className="flex items-center gap-8 "
           >
             <HashLink to={"#home"}>
-              <li className="text-base text-textColor hover:bg-slate-100 hover:text-headingColor duration-100 px-4 py-2 transition-all ease-in-out cursor-pointer">
+              <li className="hover:text-background2 text-base text-textColor duration-100 px-4 py-2 transition-all ease-in-out cursor-pointer">
                 Home
               </li>
             </HashLink>
 
             <HashLink to={"#menu"}>
               <li
-                className="text-base text-textColor hover:text-headingColor duration-100
-              hover:bg-slate-100 transition-all px-4 py-2 ease-in-out cursor-pointer"
+                className="text-base text-textColor hover:text-background2 duration-100 transition-all px-4 py-2 ease-in-out cursor-pointer"
               >
                 Menu
               </li>
             </HashLink>
 
-            <HashLink to={"#services"}>
-              <li className="text-base text-textColor px-4 py-2 hover:text-headingColor hover:bg-slate-100 duration-100 transition-all ease-in-out cursor-pointer">
+            <Link to={"/services"}>
+              <li className="text-base text-textColor px-4 py-2 hover:text-background2 duration-100 transition-all ease-in-out cursor-pointer">
                 Services
               </li>
-            </HashLink>
+            </Link>
 
             <HashLink to={"#footer"}>
-              <li className="text-base text-textColor px-4 py-2 hover:bg-slate-100 hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
+              <li className="text-base text-textColor px-4 py-2 hover:text-background2 duration-100 transition-all ease-in-out cursor-pointer">
                 About Us
               </li>
             </HashLink>
