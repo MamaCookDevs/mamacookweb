@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import {
@@ -14,6 +14,9 @@ import { getAllDrinkItems } from "./utils/firebaseFunctions";
 import { actionType } from "./context/reducer";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
+import Services from "./components/Services";
+
+import Mama from './../src/img/MamaLogo.png'
 
 const stripePromise = loadStripe(
   "pk_test_51M1wtOK5OOmq9dlGCM4kLJY0gcy7IBMguQzfhxQhrlG0C0DsfkIOvCmqM3MtL7xx0FWiku81RQ69buR3foIAWIL400WFW6E5Ps"
@@ -47,6 +50,8 @@ const App = () => {
     fetchData();
   }, []);
 
+  const [showItem, setShowItem] = useState(false);
+
   return (
     <AnimatePresence exitBeforeEnter>
       <div className="w-screen h-auto flex flex-col bg-background">
@@ -57,8 +62,19 @@ const App = () => {
           <Routes>
             <Route path="/*" element={<MainContainer />} />
             <Route path="/createItem" element={<CreateContainer />} />
+            <Route path="/services" element={<Services />} />
           </Routes>
         </main>
+
+        {showItem ? (
+				<StripeContainer />
+			) : (
+				<>
+					<h3>$10.00</h3>
+					<img src={Mama} alt='Spatula' className="w-20 h-20"/>
+					<button onClick={() => setShowItem(true)}>Purchase Spatula</button>
+				</>
+			)}
         
       </div>
     </AnimatePresence>
