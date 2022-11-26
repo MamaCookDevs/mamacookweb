@@ -1,6 +1,16 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
+import Lottie from "lottie-react";
+import {
+  CardCvcElement,
+  CardElement,
+  CardExpiryElement,
+  CardNumberElement,
+  useElements,
+  useStripe,
+} from "@stripe/react-stripe-js";
+import { motion } from "framer-motion";
+import check from "./../img/check.json";
 
 const CARD_OPTIONS = {
   iconStyle: "solid",
@@ -22,7 +32,7 @@ const CARD_OPTIONS = {
   },
 };
 
-export default function PaymentForm() {
+export default function PaymentForm({ amount }) {
   const [success, setSuccess] = useState(false);
   const stripe = useStripe();
   const elements = useElements();
@@ -31,14 +41,18 @@ export default function PaymentForm() {
     e.preventDefault();
     const { error, paymentMethod } = await stripe.createPaymentMethod({
       type: "card",
-      card: elements.getElement(CardElement),
+      card: elements.getElement(
+        CardNumberElement,
+        CardCvcElement,
+        CardExpiryElement
+      ),
     });
 
     if (!error) {
       try {
         const { id } = paymentMethod;
         const response = await axios.post("http://localhost:4000/payment", {
-          amount: 1000,
+          amount: 100,
           id,
         });
 
@@ -56,19 +70,33 @@ export default function PaymentForm() {
   return (
     <>
       {!success ? (
-        <form onSubmit={handleSubmit}>
-          <fieldset className="p-10 m-20 bg-[#7795f8]">
+        <form
+          onSubmit={handleSubmit}
+          className="w-full flex flex-col gap-10 items-center"
+        >
+          <p className="font-semibold text-2xl">Complete Your Payment</p>
+          <fieldset className="w-[80%] p-10 bg-[#7795f8]">
             <div className="FormRow">
-              <CardElement options={CARD_OPTIONS} />
+              <CardNumberElement options={CARD_OPTIONS} />
+              <CardCvcElement options={CARD_OPTIONS} />
+              <CardExpiryElement options={CARD_OPTIONS} />
             </div>
           </fieldset>
-          <button className="flex bg-primaryColor items-center justify-center">Pay</button>
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            className="flex w-[30%] h-20 hover:bg-background2 hover:drop-shadow-secondBackground hover:shadow-sm-light bg-secondColor text-white rounded-3xl items-center justify-center"
+          >
+            Pay
+          </motion.button>
         </form>
       ) : (
-        <div>
-          <h2>
-            You just bought a sweet spatula congrats this is the best decision
-            of you're life
+        <div className="flex flex-col items-center">
+          <div className="flex w-72 h-72 mt-[10%]">
+          <Lottie animationData={check} loop={true}/>
+          </div>
+        
+          <h2 className="flex justify-center text-center font-semibold text-2xl">
+            Purchase Successful
           </h2>
         </div>
       )}

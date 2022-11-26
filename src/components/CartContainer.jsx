@@ -7,6 +7,7 @@ import { useStateValue } from "../context/StateProvider";
 import { actionType } from "../context/reducer";
 import EmptyCart from "../img/woman-shopping-online.gif";
 import CartItems from "./CartItems";
+import { Link } from "react-router-dom";
 
 const CartContainer = () => {
   const [{ cartShow, cartItems, user }, dispatch] = useStateValue();
@@ -98,13 +99,16 @@ const CartContainer = () => {
             </div>
 
             {user ? (
-              <motion.button
-                whileTap={{ scale: 0.8 }}
-                type="button"
-                className="w-full p-2 rounded-full bg-gradient-to-tr from-orange-400 to-orange-600 text-gray-50 text-lg my-2 hover:shadow-lg"
-              >
-                Check Out
-              </motion.button>
+              <Link to={"/payment"}
+              className='w-full'>
+                <motion.button
+                  whileTap={{ scale: 0.8 }}
+                  type="button"
+                  className="w-full p-2 rounded-full bg-gradient-to-tr from-orange-400 to-orange-600 text-gray-50 text-lg my-2 hover:shadow-lg"
+                >
+                  Check Out
+                </motion.button>
+              </Link>
             ) : (
               <motion.button
                 whileTap={{ scale: 0.8 }}

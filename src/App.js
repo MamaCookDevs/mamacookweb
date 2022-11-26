@@ -63,18 +63,9 @@ const App = () => {
             <Route path="/*" element={<MainContainer />} />
             <Route path="/createItem" element={<CreateContainer />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/payment" element={<StripeContainer />} />
           </Routes>
         </main>
-
-        {showItem ? (
-				<StripeContainer />
-			) : (
-				<>
-					<h3>$10.00</h3>
-					<img src={Mama} alt='Spatula' className="w-20 h-20"/>
-					<button onClick={() => setShowItem(true)}>Purchase Spatula</button>
-				</>
-			)}
         
       </div>
     </AnimatePresence>
