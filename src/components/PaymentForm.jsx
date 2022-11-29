@@ -14,6 +14,7 @@ import check from "./../img/check.json";
 
 const CARD_OPTIONS = {
   iconStyle: "solid",
+  theme: 'stripe',
   style: {
     base: {
       iconColor: "#c4f0ff",
