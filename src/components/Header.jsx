@@ -62,11 +62,11 @@ const Header = () => {
             exit={{ opacity: 0, x: 200 }}
             className="flex items-center gap-8 "
           >
-            <HashLink to={"#home"}>
+            <Link to={"/*"}>
               <li className="hover:text-background2 text-base text-textColor duration-100 px-4 py-2 transition-all ease-in-out cursor-pointer">
                 Home
               </li>
-            </HashLink>
+            </Link>
 
             <HashLink to={"#menu"}>
               <li
