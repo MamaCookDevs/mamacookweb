@@ -116,7 +116,7 @@ const Header = () => {
                 exit={{ opacity: 0, scale: 0.6 }}
                 className="w-40 bg-gray-50 shadow-x1 rounded-lg flex flex-col absolute top-12 right-0"
               >
-                {user && user.email === user.email && (
+             {/*    {user && user.email === user.email && (
                   <Link to={"/createItem"}>
                     <p
                       className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100
@@ -125,7 +125,7 @@ const Header = () => {
                       New Item <MdAdd />
                     </p>
                   </Link>
-                )}
+                )} */}
 
                 <p
                   className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 
