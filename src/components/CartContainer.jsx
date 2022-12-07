@@ -8,7 +8,7 @@ import { actionType } from "../context/reducer";
 import EmptyCart from "../img/woman-shopping-online.gif";
 import CartItems from "./CartItems";
 import { Link } from "react-router-dom";
-import { Spinner } from '@chakra-ui/react'
+
 
 const CartContainer = () => {
   const [{ cartShow, cartItems, user }, dispatch] = useStateValue();
