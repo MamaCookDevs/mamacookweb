@@ -33,7 +33,7 @@ const App = () => {
     };
 
     fetchData()
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   //  const [showItem, setShowItem] = useState(false);
 
